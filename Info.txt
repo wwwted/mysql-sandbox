@@ -1,0 +1,13 @@
+
+## Small sandbox environment ##
+
+1) Download MySQL tar package, for example like: wget https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.8-macos15-arm64.tar.gz
+   (on mac then run: xattr -rc mysql-8.4.8-macos15-arm64.tar.gz
+2) untar the MySQL package and create a symlink called mysqlsrc in sandobx folder like: ln -s /path/to/mysql/binary/package mysqlsrc
+3) Setup environment (PATH) and create inital my.cnf by running: . ./setenv
+   change the new my.cnf if needed, port and server-id might need changing, everything else should be local
+4) Create new MySQL instance: ./scripts/create_instance.sh
+
+Login using: mysql -uted -pted -h127.0.0.1 -P3316
+
+
